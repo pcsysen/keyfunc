@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/MicahParks/keyfunc/v2"
+	"github.com/pcsysen/keyfunc/v2"
 )
 
 func TestJWKS_Refresh(t *testing.T) {
