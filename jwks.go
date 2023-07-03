@@ -237,3 +237,7 @@ func (j *JWKS) getKey(alg, kid string) (jsonKey interface{}, err error) {
 
 	return pubKey.public, nil
 }
+
+func (j *JWKS) DeleteKey(kid string) {
+	delete(j.keys, kid)
+}
