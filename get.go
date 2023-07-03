@@ -205,7 +205,9 @@ func (j *JWKS) refresh() (err error) {
 		return fmt.Errorf("failed to create request via factory function: %w", err)
 	}
 
+	fmt.Printf("req = %#v\n", req)
 	resp, err := j.client.Do(req)
+	fmt.Printf("resp.StatusCode = %v\n", resp.StatusCode)
 	if err != nil {
 		return err
 	}
