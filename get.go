@@ -211,6 +211,7 @@ func (j *JWKS) refresh() (err error) {
 	if err != nil {
 		return err
 	}
+	fmt.Println("++++++")
 
 	jwksBytes, err := j.responseExtractor(ctx, resp)
 	if err != nil {
@@ -224,6 +225,7 @@ func (j *JWKS) refresh() (err error) {
 	j.raw = jwksBytes
 
 	updated, err := NewJSON(jwksBytes)
+	fmt.Printf("### updated = %v ###\n", updated)
 	if err != nil {
 		return err
 	}

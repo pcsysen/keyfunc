@@ -240,4 +240,5 @@ func (j *JWKS) getKey(alg, kid string) (jsonKey interface{}, err error) {
 
 func (j *JWKS) DeleteKey(kid string) {
 	delete(j.keys, kid)
+	j.raw = []byte{}
 }
